@@ -5,12 +5,17 @@ import Order from './Order';
 import Fish from './Fish';
 import sampleFishes from '../sample-fishes';
 import base from '../base';
+import PropTypes from 'prop-types';
 
 class App extends React.Component {
   state = {
     fishes: {},
     order: {}
   };
+
+  static propTypes = {
+    match: PropTypes.object
+  }
 
   componentDidMount() {
     const { params } = this.props.match;
